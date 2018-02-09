@@ -12,6 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('FilmothequeBundle:Default:index.html.twig');
+        return $this->render('categorie/index.html.twig');
     }
 }

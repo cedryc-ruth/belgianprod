@@ -3,6 +3,7 @@
 namespace FilmothequeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Categorie
@@ -25,6 +26,11 @@ class Categorie
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=60, unique=true)
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *  max = 60,
+     *  maxMessage = "La valeur ne peut dépasser {{ limit }} caractères."
+     * )
      */
     private $nom;
 
